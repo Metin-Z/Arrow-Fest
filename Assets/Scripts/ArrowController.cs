@@ -5,14 +5,13 @@ using UnityEngine;
 public class ArrowController : MonoBehaviour
 {
     public float moveSpeed;
-    public float swipeSpeed;
+    public float swerveSpeed,swipeSpeed;
 
     public Rigidbody rb;
 
-     Vector3 firstPos;
-     Vector3 lastPos;
+    Vector3 firstPos, endPos;
 
-    
+
     void Start()
     {
         Time.timeScale = 1;
@@ -21,19 +20,13 @@ public class ArrowController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Touch();
         Clamp();
         transform.Translate(Vector3.forward * Time.deltaTime*moveSpeed);
 
-        float moveX = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector3(moveX * swipeSpeed, rb.velocity.y,rb.velocity.z);
-        if (Input.GetMouseButtonDown(0))
-        {
-            
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            
-        }
+        //float moveX = Input.GetAxis("Horizontal");
+        //rb.velocity = new Vector3(moveX * swipeSpeed, rb.velocity.y,rb.velocity.z);
+      
     }
 
     public void Clamp()
@@ -43,5 +36,24 @@ public class ArrowController : MonoBehaviour
 
         float xPos = Mathf.Clamp(transform.position.x, minX, maxX);
         transform.position = new Vector3(xPos, transform.position.y,transform.position.z);
+    }
+    public void Touch()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            firstPos = Input.mousePosition;
+        }
+        else if (Input.GetMouseButton(0))
+        {
+            endPos = Input.mousePosition;
+            float farkX = endPos.x - firstPos.x;
+            transform.Translate(farkX * Time.deltaTime * swerveSpeed / 100, 0, 0);
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            firstPos = Vector3.zero;
+            endPos = Vector3.zero;
+        }
     }
 }

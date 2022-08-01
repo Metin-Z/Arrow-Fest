@@ -5,23 +5,27 @@ using UnityEngine;
 public class Enemy1 : MonoBehaviour
 {
     Animator anim;
+    bool dead;
     void Start()
     {
         anim= gameObject.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Arrow")
+        if (other.CompareTag("Arrow"))
         {
-            Debug.Log("deneme");
-            anim.SetBool("dead", true);
-            Destroy(gameObject, 4);
+            Dead();
         }
+    }
+    void Dead()
+    {
+        if (dead)
+            return;
+        dead = true;
+        CanvasManager.ninjaCount++;
+        anim.SetBool("dead", true);
+        Destroy(gameObject, 4);
+        //gameObject.GetComponent<Enemy1>().enabled = false;
     }
 }
