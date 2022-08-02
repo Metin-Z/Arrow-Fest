@@ -4,30 +4,21 @@ using UnityEngine;
 
 public class finishline : MonoBehaviour
 {
-    public GameObject level1end;
-    public GameObject level2end;
-    public GameObject finish1;
-    void Start()
+    LevelManager _levelManager;
+    void Awake()
     {
-        
+        _levelManager = FindObjectOfType<LevelManager>();
     }
 
-    void Update()
-    {
-        if (LevelManager.EndActive == false)
-        {
-            level1end.SetActive(false);
-            //level2end.SetActive(true);
-            Destroy(finish1,2);
-            
-        }
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Arrow"))
         {
-            level1end.SetActive(true);
+            if (LevelManager.EndActive)
+                return;
             LevelManager.EndActive = true;
+            _levelManager.nextLevelUI.SetActive(LevelManager.EndActive);
+            gameObject.SetActive(false);
         }
     }
 }

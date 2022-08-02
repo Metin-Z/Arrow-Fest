@@ -5,8 +5,11 @@ public class LevelManager : MonoBehaviour
 {
     public Level[] Levels;
     private GameObject lastLevelPrefab;
+    private GameObject lastFinishLinePrefab;
 
-    public static bool EndActive = false;
+    public static bool EndActive = true;
+
+    public GameObject nextLevelUI;
 
     public void Start()
     {
@@ -22,20 +25,24 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        if (lastLevelPrefab != null)
+        if (lastLevelPrefab != null) 
+        {
             Destroy(lastLevelPrefab);
+            Destroy(lastFinishLinePrefab);
+        }
 
         lastLevelPrefab = Instantiate(currentLevel.Prefab);
-        
+        lastFinishLinePrefab = Instantiate(currentLevel.finishLinePrefab);
+        EndActive = false;
+
     }
 
     public void NextLevel()
     {
         Level currentLevel = GetCurrentLevel();
         PlayerPrefs.SetInt(CommonTypes.LEVEL_DATA_KEY, currentLevel.Id + 1);
-
-        InitializeLevel();
-        EndActive = false;
+        Debug.Log("Next Level");
+        InitializeLevel();       
     }
 
     public Level GetCurrentLevel()
@@ -45,4 +52,6 @@ public class LevelManager : MonoBehaviour
 
         return Levels.SingleOrDefault(x => x.Id == currentLevelId);
     }
+    
+
 }
