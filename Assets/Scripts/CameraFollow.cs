@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField]
+   
 
-    GameObject player;
-    Vector3 fark;
-
-
-    // Use this for initialization
+    public Transform target;
+    public float speed = 2.0f;
+    //Vector3 fark;
     void Start()
     {
-        fark = transform.position - player.transform.position;
-
-        
+        //fark = transform.position = target.transform.position;
     }
-
-    // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position + fark;
+        //transform.position = target.transform.position + fark;
+
+        Vector3 position = transform.position;
+        position.x = Mathf.Lerp(transform.position.x, target.position.x, speed * Time.deltaTime);
+        //position.z = Mathf.Lerp(transform.position.z -8,target.position.z,speed);
+
+        transform.position = position;
 
     }
 }
