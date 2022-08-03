@@ -48,9 +48,9 @@ public class LevelManager : MonoBehaviour
     public Level GetCurrentLevel()
     {
         int currentLevelId = PlayerPrefs.GetInt(CommonTypes.LEVEL_DATA_KEY);
-        Debug.Log(currentLevelId,gameObject);
+        int totalLevelCount = Levels.Length;
 
-        return Levels.SingleOrDefault(x => x.Id == currentLevelId);
+        return Levels.SingleOrDefault(x => x.Id == currentLevelId % totalLevelCount);
     }
     
 

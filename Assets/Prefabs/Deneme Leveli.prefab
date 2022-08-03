@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6626920766640000976}
   - component: {fileID: 5060300279185592192}
   m_Layer: 0
-  m_Name: "Deneme Cameras\u0131"
+  m_Name: Deneme Leveli
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
