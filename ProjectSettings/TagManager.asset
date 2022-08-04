@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Green1
+  - Red1
+  - Arrow
+  - Clone
   layers:
   - Default
   - TransparentFX

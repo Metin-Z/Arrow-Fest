@@ -32,7 +32,7 @@ public class ArrowPool : MonoBehaviour
             }
         }
     }
-    public GameObject GetPooledObject(int objectType)
+    public GameObject GetPooledObject(int objectType=0)
     {
         if (objectType >= pools.Length)
         {
