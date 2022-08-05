@@ -10,10 +10,13 @@ public class LevelManager : MonoBehaviour
     public static bool EndActive = true;
 
     public GameObject nextLevelUI;
+    public GameObject failLevelUI;
 
     public void Start()
     {
         InitializeLevel();
+        
+        
     }
     public void InitializeLevel()
     {
@@ -52,6 +55,15 @@ public class LevelManager : MonoBehaviour
 
         return Levels.SingleOrDefault(x => x.Id == currentLevelId % totalLevelCount);
     }
-    
 
+    public void Update()
+    {
+        var cloneCount = GameObject.FindGameObjectsWithTag("Arrow");
+
+        if (cloneCount.Length < 0 )
+        {
+            failLevelUI.SetActive(true);
+        }
+    }
+    
 }
