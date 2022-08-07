@@ -18,6 +18,8 @@ public class MenuManager : MonoBehaviour
     }
     public void Restart()
     {
+        GateComponent.DeadActive = false;
+        SpawnedArrow.zero = false;
         SceneManager.LoadScene(0);
     }
 }

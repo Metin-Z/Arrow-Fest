@@ -6,14 +6,18 @@ public class SpawnedArrow : MonoBehaviour
 {
     public GameObject[] _SpawnedArrows;
     public GameObject failLevelUI;
+    public GateComponent gate;
 
+    public static bool zero = false;
 
     private void Update()
     {
        _SpawnedArrows = GameObject.FindGameObjectsWithTag("Arrow");
-        if (_SpawnedArrows.Length < 2)
+        if (_SpawnedArrows.Length < 2 && GateComponent.DeadActive == true)
         {
-            Debug.Log("arrowend");
+            zero = true;
+            Debug.Log("Oklar Bitti");
+            Time.timeScale = 0;
             failLevelUI.SetActive(true);
         }
     }

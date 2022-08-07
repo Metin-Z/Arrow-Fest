@@ -45,7 +45,9 @@ public class LevelManager : MonoBehaviour
         Level currentLevel = GetCurrentLevel();
         PlayerPrefs.SetInt(CommonTypes.LEVEL_DATA_KEY, currentLevel.Id + 1);
         Debug.Log("Next Level");
-        InitializeLevel();       
+        InitializeLevel();
+        GateComponent.DeadActive = false;
+        SpawnedArrow.zero = false;
     }
 
     public Level GetCurrentLevel()
@@ -56,14 +58,6 @@ public class LevelManager : MonoBehaviour
         return Levels.SingleOrDefault(x => x.Id == currentLevelId % totalLevelCount);
     }
 
-    public void Update()
-    {
-        var cloneCount = GameObject.FindGameObjectsWithTag("Arrow");
-
-        if (cloneCount.Length < 0 )
-        {
-            failLevelUI.SetActive(true);
-        }
-    }
+    
     
 }

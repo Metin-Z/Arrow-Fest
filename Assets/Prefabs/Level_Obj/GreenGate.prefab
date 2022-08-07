@@ -213,8 +213,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowCount1: 20
+  arrowCount2: 0
+  removeCount1: 0
   arrow: {fileID: 0}
-  arrow2Pos: {fileID: 0}
   end: {fileID: 0}
   green: 1
   red: 0

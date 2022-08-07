@@ -18,8 +18,13 @@ public class CanvasManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var cloneCount = GameObject.FindGameObjectsWithTag("Arrow");
+        
+        //var cloneCount = GameObject.FindGameObjectsWithTag("Arrow");
         scoreText.text = ninjaCount.ToString();
         ArrowText.text = spawnarrow._SpawnedArrows.Length.ToString();
+        if (SpawnedArrow.zero == true)
+        {
+            ArrowText.text = (spawnarrow._SpawnedArrows.Length - 1).ToString();
+        }
     }
 }
