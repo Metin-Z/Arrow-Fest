@@ -39,24 +39,21 @@ public class GateComponent : MonoBehaviour
 
                 for (int j = _SpawnedArrows.Length-1; j < count; j++)
                 {
-                    float angle = j * Mathf.PI * 2 / m_multiplyValue;
-                    float x = Mathf.Cos(angle) * radi ;
-                    float y = Mathf.Sin(angle) * radi ;
-
-                    Vector3 pos = other.GetComponent<ArrowPosList>().ArrowSpawnList[j].transform.position + new Vector3(x, y, 0);
-                    float angleDegrees = -angle * Mathf.Rad2Deg;
-                    Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
+                    GameObject obj = m_objectPool.GetPooledObject();
 
                     if (other.GetComponent<ArrowPosList>().ArrowSpawnList[j].GetComponent<ArrowSlotComp>().PosUsed == false)
                     {
-                        other.GetComponent<ArrowPosList>().ArrowSpawnList[j].transform.position = pos;
+                        obj.transform.position = new Vector3(
+                         other.GetComponent<ArrowPosList>().ArrowSpawnList[j].transform.position.x,
+                         other.GetComponent<ArrowPosList>().ArrowSpawnList[j].transform.position.y,
+                         other.GetComponent<ArrowPosList>().ArrowSpawnList[j].transform.position.z);
                     }
                     else
                     {
-                        other.GetComponent<ArrowPosList>().ArrowSpawnList[j+1].transform.position = pos;
+                        other.GetComponent<ArrowPosList>().ArrowSpawnList[j+1].transform.position = new Vector3(transform.position.x, transform.position.y);
                     }
                     
-                    GameObject obj = m_objectPool.GetPooledObject();
+                   
 
                     Debug.Log(obj);
                     Debug.Log("Oklar Arttýrýldý");
