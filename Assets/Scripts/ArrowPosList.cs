@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class ArrowPosList : MonoBehaviour
 {
-    public Transform[] ArrowSpawnList;
+    public ArrowSlotComp[] ArrowSpawnList;
     public int arrowActiveCount;
 }

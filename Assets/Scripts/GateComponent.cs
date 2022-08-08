@@ -8,10 +8,21 @@ public class GateComponent : MonoBehaviour
     public GateGroup GateGroup;
     public static bool DeadActive = false;
 
+    public float radi = 0.45f;
+    
+
+    public GameObject[] _SpawnedArrows;
 
 
-
-
+    public void Update()
+    {
+        if (Input.GetKeyDown(("up")))
+        {
+            arrow.gameObject.transform.localScale += new Vector3(0, 0.5f , 0.5f);
+        }
+       
+        _SpawnedArrows = GameObject.FindGameObjectsWithTag("Arrow");
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (GateGroup.IsUsed)
@@ -19,23 +30,32 @@ public class GateComponent : MonoBehaviour
 
         if (other.gameObject.CompareTag("Arrow") && other.GetComponent<ArrowPosList>())
         {
+
+            radi+= 0.55f;
             DeadActive = true;
             if (m_multiplyValue > 0)//arttýracaðýz
             {
                 int count = other.GetComponent<ArrowPosList>().arrowActiveCount + m_multiplyValue;
 
-                for (int j = 0; j < count; j++)
+                for (int j = _SpawnedArrows.Length-1; j < count; j++)
                 {
                     float angle = j * Mathf.PI * 2 / m_multiplyValue;
-                    float x = Mathf.Cos(angle) * 0.25f;
-                    float y = Mathf.Sin(angle) * 0.25f;
+                    float x = Mathf.Cos(angle) * radi ;
+                    float y = Mathf.Sin(angle) * radi ;
 
                     Vector3 pos = other.GetComponent<ArrowPosList>().ArrowSpawnList[j].transform.position + new Vector3(x, y, 0);
                     float angleDegrees = -angle * Mathf.Rad2Deg;
                     Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
 
-
-                    other.GetComponent<ArrowPosList>().ArrowSpawnList[j].transform.position = pos;
+                    if (other.GetComponent<ArrowPosList>().ArrowSpawnList[j].GetComponent<ArrowSlotComp>().PosUsed == false)
+                    {
+                        other.GetComponent<ArrowPosList>().ArrowSpawnList[j].transform.position = pos;
+                    }
+                    else
+                    {
+                        other.GetComponent<ArrowPosList>().ArrowSpawnList[j+1].transform.position = pos;
+                    }
+                    
                     GameObject obj = m_objectPool.GetPooledObject();
 
                     Debug.Log(obj);
