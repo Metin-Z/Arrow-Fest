@@ -93,10 +93,11 @@ public class GateComponent : MonoBehaviour
                 for (int i = 0; i < Mathf.Abs(m_multiplyValue) + 1; i++)
                 {
                     Debug.Log("Ok Yok Edildi");
-                    GameObject obj = arrow.transform.GetChild(0).transform.GetChild(i).gameObject;
+                    GameObject obj = arrow.transform.GetChild(0).transform.GetChild(i).gameObject.transform.GetChild(0).gameObject;
 
-                    obj.SetActive(false);
-                    Destroy(obj, 1f);
+                    //obj.SetActive(false);
+                    Destroy(obj);
+                   // other.GetComponent<ArrowPosList>().ArrowSpawnList[i] = other.GetComponent<ArrowPosList>().ArrowSpawnList[];
                     gameObject.SetActive(false);
 
                 }

@@ -23,9 +23,9 @@ public class CanvasManager : MonoBehaviour
         //var cloneCount = GameObject.FindGameObjectsWithTag("Arrow");
         scoreText.text = ninjaCount.ToString();
         ArrowText.text = spawnarrow._SpawnedArrows.Length.ToString();
-        //if (SpawnedArrow.zero == true)
-        //{
-        //    ArrowText.text = (spawnarrow._SpawnedArrows.Length - 1).ToString();
-        //}
+        if (SpawnedArrow.zero == true)
+        {
+            ArrowText.text = (spawnarrow._SpawnedArrows.Length - 1).ToString();
+        }
     }
 }
