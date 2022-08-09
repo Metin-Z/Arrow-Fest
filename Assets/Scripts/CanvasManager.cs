@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CanvasManager : MonoBehaviour
 {
-    public Text scoreText;
-    public Text ArrowText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI ArrowText;
     public static int ninjaCount;
 
     public SpawnedArrow spawnarrow;
@@ -22,9 +23,9 @@ public class CanvasManager : MonoBehaviour
         //var cloneCount = GameObject.FindGameObjectsWithTag("Arrow");
         scoreText.text = ninjaCount.ToString();
         ArrowText.text = spawnarrow._SpawnedArrows.Length.ToString();
-        if (SpawnedArrow.zero == true)
-        {
-            ArrowText.text = (spawnarrow._SpawnedArrows.Length - 1).ToString();
-        }
+        //if (SpawnedArrow.zero == true)
+        //{
+        //    ArrowText.text = (spawnarrow._SpawnedArrows.Length - 1).ToString();
+        //}
     }
 }

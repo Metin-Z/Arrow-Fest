@@ -9,15 +9,17 @@ public class ArrowPosList : MonoBehaviour
 
     public void Start()
     {
-        float radius = 0.045f;
+        float radius = 0.095f;
         for (int i = 0; i < ArrowSpawnList.Length; i++)
         {
-            
-            if (i / 10 == 0)
+            Debug.Log("Pos List For");
+            if (i % 10  == 0)
             {
-                radius += 0.045f;
+                radius += 0.3f;
+                Debug.Log("10 a böldü");
             }
-            
+           
+
             float angle = i * Mathf.PI * 2 / 10;
             float x = Mathf.Cos(angle) * radius;
             float y = Mathf.Sin(angle) * radius;

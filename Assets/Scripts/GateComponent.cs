@@ -9,6 +9,7 @@ public class GateComponent : MonoBehaviour
     public static bool DeadActive = false;
 
     public float radi = 0.45f;
+    public int space = 0;
     
 
     public GameObject[] _SpawnedArrows;
@@ -19,6 +20,26 @@ public class GateComponent : MonoBehaviour
         if (Input.GetKeyDown(("up")))
         {
             arrow.gameObject.transform.localScale += new Vector3(0, 0.5f , 0.5f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject obj = m_objectPool.GetPooledObject();
+            space++;
+            if (arrow.GetComponent<ArrowPosList>().ArrowSpawnList[space].GetComponent<ArrowSlotComp>().PosUsed == false)
+            {
+                obj.transform.position = new Vector3(
+                 arrow.GetComponent<ArrowPosList>().ArrowSpawnList[space].transform.position.x,
+                 arrow.GetComponent<ArrowPosList>().ArrowSpawnList[space].transform.position.y,
+                 arrow.GetComponent<ArrowPosList>().ArrowSpawnList[space].transform.position.z);
+            }
+            else
+            {
+                arrow.GetComponent<ArrowPosList>().ArrowSpawnList[space + 1].transform.position = new Vector3(transform.position.x, transform.position.y);
+            }
+            obj.transform.SetParent(arrow.GetComponent<ArrowPosList>().ArrowSpawnList[space].transform);
+            obj.transform.localEulerAngles = Vector3.zero;
+            obj.transform.localPosition = Vector3.zero;
         }
        
         _SpawnedArrows = GameObject.FindGameObjectsWithTag("Arrow");
