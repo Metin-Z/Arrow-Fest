@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Linq;
 public class GateComponent : MonoBehaviour
 {
     [SerializeField] private int m_multiplyValue;
@@ -10,11 +10,15 @@ public class GateComponent : MonoBehaviour
 
     public float radi = 0.45f;
     public int space = 0;
+
+    public ArrowPosList poslist;
+
     
 
     public GameObject[] _SpawnedArrows;
+    public GameObject SpawnedArrows;
 
-
+    public GameObject ListArrows;
     public void Update()
     {
         if (Input.GetKeyDown(("up")))
@@ -22,25 +26,7 @@ public class GateComponent : MonoBehaviour
             arrow.gameObject.transform.localScale += new Vector3(0, 0.5f , 0.5f);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GameObject obj = m_objectPool.GetPooledObject();
-            space++;
-            if (arrow.GetComponent<ArrowPosList>().ArrowSpawnList[space].GetComponent<ArrowSlotComp>().PosUsed == false)
-            {
-                obj.transform.position = new Vector3(
-                 arrow.GetComponent<ArrowPosList>().ArrowSpawnList[space].transform.position.x,
-                 arrow.GetComponent<ArrowPosList>().ArrowSpawnList[space].transform.position.y,
-                 arrow.GetComponent<ArrowPosList>().ArrowSpawnList[space].transform.position.z);
-            }
-            else
-            {
-                arrow.GetComponent<ArrowPosList>().ArrowSpawnList[space + 1].transform.position = new Vector3(transform.position.x, transform.position.y);
-            }
-            obj.transform.SetParent(arrow.GetComponent<ArrowPosList>().ArrowSpawnList[space].transform);
-            obj.transform.localEulerAngles = Vector3.zero;
-            obj.transform.localPosition = Vector3.zero;
-        }
+        
        
         _SpawnedArrows = GameObject.FindGameObjectsWithTag("Arrow");
     }
@@ -56,11 +42,12 @@ public class GateComponent : MonoBehaviour
             DeadActive = true;
             if (m_multiplyValue > 0)//arttýracaðýz
             {
-                int count = other.GetComponent<ArrowPosList>().arrowActiveCount + m_multiplyValue;
+                int count = _SpawnedArrows.Length + m_multiplyValue;
 
                 for (int j = _SpawnedArrows.Length-1; j < count; j++)
                 {
                     GameObject obj = m_objectPool.GetPooledObject();
+                    ListArrows.GetComponent<SpawnedArrow>().ActiveArrows.Add(obj);
 
                     if (other.GetComponent<ArrowPosList>().ArrowSpawnList[j].GetComponent<ArrowSlotComp>().PosUsed == false)
                     {
@@ -93,11 +80,13 @@ public class GateComponent : MonoBehaviour
                 for (int i = 0; i < Mathf.Abs(m_multiplyValue) + 1; i++)
                 {
                     Debug.Log("Ok Yok Edildi");
-                    GameObject obj = arrow.transform.GetChild(0).transform.GetChild(i).gameObject.transform.GetChild(0).gameObject;
+                    //GameObject obj = arrow.transform.GetChild(0).transform.GetChild(i).gameObject.transform.GetChild(0).gameObject;
 
+                    Destroy(ListArrows.GetComponent<SpawnedArrow>().ActiveArrows.LastOrDefault());
+                    ListArrows.GetComponent<SpawnedArrow>().ActiveArrows.Remove(ListArrows.GetComponent<SpawnedArrow>().ActiveArrows.LastOrDefault());
                     //obj.SetActive(false);
-                    Destroy(obj);
-                   // other.GetComponent<ArrowPosList>().ArrowSpawnList[i] = other.GetComponent<ArrowPosList>().ArrowSpawnList[];
+
+
                     gameObject.SetActive(false);
 
                 }

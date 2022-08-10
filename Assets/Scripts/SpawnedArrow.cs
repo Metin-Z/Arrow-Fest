@@ -7,6 +7,7 @@ public class SpawnedArrow : MonoBehaviour
     public GameObject[] _SpawnedArrows;
     public GameObject failLevelUI;
     public GateComponent gate;
+    public List<GameObject> ActiveArrows;
 
     public static bool zero = false;
 

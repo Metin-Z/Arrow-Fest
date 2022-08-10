@@ -21,6 +21,7 @@ public class ArrowSlotComp : MonoBehaviour
         }
      
     }
+
     //public void UseCheck()
     //{
     //    if (gameObject.transform.GetChild(0) != null)
