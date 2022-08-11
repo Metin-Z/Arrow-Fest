@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Enemy1 : MonoBehaviour
 {
     Animator anim;
     bool dead;
+    public bool die;
+    public GameObject headArrow;
     void Start()
     {
         anim= gameObject.GetComponent<Animator>();
@@ -15,6 +18,8 @@ public class Enemy1 : MonoBehaviour
     {
         if (other.CompareTag("Arrow"))
         {
+            die = true;
+            headArrow.SetActive(true);
             Dead();
         }
     }
@@ -25,7 +30,7 @@ public class Enemy1 : MonoBehaviour
         dead = true;
         CanvasManager.ninjaCount++;
         anim.SetBool("dead", true);
-        Destroy(gameObject, 4);
+        Destroy(gameObject, 2.5f);
         //gameObject.GetComponent<Enemy1>().enabled = false;
     }
 }

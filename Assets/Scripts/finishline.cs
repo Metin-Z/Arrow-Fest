@@ -18,7 +18,7 @@ public class finishline : MonoBehaviour
                 return;
             LevelManager.EndActive = true;
             _levelManager.nextLevelUI.SetActive(LevelManager.EndActive);
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
     }
 }
