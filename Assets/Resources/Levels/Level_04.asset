@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9bad5bc0a99c344fa6bd642f931009d, type: 3}
   m_Name: Level_04
   m_EditorClassIdentifier: 
-  Id: 0
-  Prefab: {fileID: 0}
-  finishLinePrefab: {fileID: 0}
+  Id: 3
+  Prefab: {fileID: 3078277059959732403, guid: 5dfa1e5d40fcaa8469039de7755cf266, type: 3}
+  finishLinePrefab: {fileID: 846145163609870005, guid: 3e2a1728d6bef574693461d9fa753077, type: 3}
