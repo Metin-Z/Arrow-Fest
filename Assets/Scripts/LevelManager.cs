@@ -51,7 +51,7 @@ public class LevelManager : MonoBehaviour
         InitializeLevel();
         GateComponent.DeadActive = false;
         SpawnedArrow.zero = false;
-        RenderSettings.skybox = Skybox[Random.Range(0,2)];
+        RenderSettings.skybox = Skybox[Random.Range(0,3)];
     }
 
     public Level GetCurrentLevel()

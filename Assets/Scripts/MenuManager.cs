@@ -5,21 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject PauseButton;
+    public GameObject ResumeButton;
     public void Restart()
     {
         GateComponent.DeadActive = false;
         SpawnedArrow.zero = false;
         SceneManager.LoadScene(0);
+    }
+    public void Resume()
+    {
+        PauseButton.SetActive(true);
+        ResumeButton.SetActive(false);
+        Time.timeScale = 1;
+    }
+    public void Pause()
+    {
+        ResumeButton.SetActive(true);
+        PauseButton.SetActive(false);
+        Time.timeScale = 0;
     }
 }
