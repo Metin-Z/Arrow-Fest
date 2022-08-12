@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
@@ -11,6 +13,7 @@ public class LevelManager : MonoBehaviour
 
     public GameObject nextLevelUI;
     public GameObject failLevelUI;
+    public List<Material> Skybox;
 
     public void Start()
     {
@@ -48,6 +51,7 @@ public class LevelManager : MonoBehaviour
         InitializeLevel();
         GateComponent.DeadActive = false;
         SpawnedArrow.zero = false;
+        RenderSettings.skybox = Skybox[Random.Range(0,2)];
     }
 
     public Level GetCurrentLevel()

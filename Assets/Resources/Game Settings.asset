@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de5e82df89ec30442a3d5d23eb04a8e5, type: 3}
   m_Name: Game Settings
   m_EditorClassIdentifier: 
-  PlayerSpeed: 10
+  PlayerSpeed: 12.5
   PlayerSwipeSpeed: 10

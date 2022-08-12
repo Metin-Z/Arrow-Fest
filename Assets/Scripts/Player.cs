@@ -47,24 +47,6 @@ public class Player : MonoBehaviour
         transform.Translate(Vector3.right * Input.GetAxis("Mouse X") * PlayerSwipeSpeed * Time.deltaTime);
 
         return;
-
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    firstPos = Input.mousePosition;
-        //}
-        //else if (Input.GetMouseButton(0))
-        //{
-        //    endPos = Input.mousePosition;
-        //    float farkX = endPos.x - firstPos.x;
-        //    transform.Translate(farkX * Time.deltaTime * swerveSpeed / 400, 0, 0);
-        //    StartCoroutine(TouchZero());
-
-        //}
-
-        //if (Input.GetMouseButtonUp(0))
-        //{
-        //   firstPos = Vector3.zero;
-        //   endPos = Vector3.zero;
         }
     }
 
