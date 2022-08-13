@@ -10,6 +10,8 @@ public class Enemy1 : MonoBehaviour
     public bool die;
     public bool run;
     public GameObject headArrow;
+    public GameObject blood;
+    public Transform bloodPos;
     void Start()
     {
         anim= gameObject.GetComponent<Animator>();
@@ -28,6 +30,7 @@ public class Enemy1 : MonoBehaviour
         if (other.CompareTag("Arrow"))
         {
             die = true;
+            Instantiate(blood, bloodPos);
             headArrow.SetActive(true);
             Dead();
         }

@@ -552,6 +552,8 @@ MonoBehaviour:
   die: 0
   run: 1
   headArrow: {fileID: 4011770687754153124}
+  blood: {fileID: 5435510723279702264, guid: 5a98cebafbcd9334bbb80ebd64458222, type: 3}
+  bloodPos: {fileID: 892586749161263790}
 --- !u!114 &5357395836001109721
 MonoBehaviour:
   m_ObjectHideFlags: 0

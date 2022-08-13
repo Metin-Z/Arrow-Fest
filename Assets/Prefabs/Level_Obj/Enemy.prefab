@@ -1421,7 +1421,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   die: 0
+  run: 0
   headArrow: {fileID: 8040523031449966315}
+  blood: {fileID: 5435510723279702264, guid: 5a98cebafbcd9334bbb80ebd64458222, type: 3}
+  bloodPos: {fileID: 6078201280960882913}
 --- !u!114 &1324139753561783446
 MonoBehaviour:
   m_ObjectHideFlags: 0
