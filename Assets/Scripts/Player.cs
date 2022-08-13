@@ -1,4 +1,7 @@
 using UnityEngine;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour
 {
@@ -12,6 +15,13 @@ public class Player : MonoBehaviour
 
     public GameSettings settings;
 
+
+    public GameObject spawnedArrows;
+  
+
+    public float minX, maxX;
+    //public LayerMask layermask;
+    public float mesafe;
     void Start()
     {
         Time.timeScale = 1;
@@ -26,8 +36,11 @@ public class Player : MonoBehaviour
         Clamp();
         transform.Translate(Vector3.forward * Time.deltaTime * PlayerSpeed);
 
-        //float moveX = Input.GetAxis("Horizontal");
-        //rb.velocity = new Vector3(moveX * swipeSpeed, rb.velocity.y,rb.velocity.z);
+        if (Input.GetMouseButton(0))
+        {
+            GetRay();
+        }
+      
 
     }
 
@@ -47,6 +60,43 @@ public class Player : MonoBehaviour
         transform.Translate(Vector3.right * Input.GetAxis("Mouse X") * PlayerSwipeSpeed * Time.deltaTime);
 
         return;
+    }
+
+
+void MoveObjects(Transform objectTransform, float degree)
+    {
+        Vector3 pos = Vector3.zero;
+        pos.x = Mathf.Cos(degree * Mathf.Deg2Rad);
+        pos.y = Mathf.Sin(degree * Mathf.Deg2Rad);
+        objectTransform.localPosition = pos * mesafe;
+    }
+    void Diz()
+    {
+        float angle = 1f;
+        float arrowCount = spawnedArrows.GetComponent<SpawnedArrow>().ActiveArrows.Count;
+        angle = 360 / arrowCount;
+
+        for (int i = 0; i < arrowCount; i++)
+        {
+            MoveObjects(spawnedArrows.GetComponent<SpawnedArrow>().ActiveArrows[i].transform, i * angle);
         }
     }
+    void GetRay()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = Camera.main.transform.position.z;
+        Ray ray = Camera.main.ScreenPointToRay(mousePos);
+
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 100))
+        {
+            Vector3 mouse = hit.point;
+            mouse.x = Mathf.Clamp(mouse.x, minX, maxX);
+
+            mesafe = mouse.x;
+
+            Diz();
+        }
+    }
+}
 
