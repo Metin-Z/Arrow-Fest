@@ -12,6 +12,7 @@ public class MenuManager : MonoBehaviour
         GateComponent.DeadActive = false;
         SpawnedArrow.zero = false;
         SceneManager.LoadScene(0);
+        LevelManager.miniGame = false;
     }
     public void Resume()
     {

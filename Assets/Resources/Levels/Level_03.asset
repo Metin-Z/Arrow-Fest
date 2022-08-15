@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 2
   Prefab: {fileID: 3078277059959732403, guid: 1e33f20246ef8ca4784bdf919ad4d33e, type: 3}
+  MiniGamePrefab: {fileID: 8787356131067609142, guid: 49806c6f33841974d9220480bcc37a1e, type: 3}
   finishLinePrefab: {fileID: 1515088874674754104, guid: a060b84c445e41f409e542a9a941ea12, type: 3}

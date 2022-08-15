@@ -8,8 +8,10 @@ public class LevelManager : MonoBehaviour
     public Level[] Levels;
     private GameObject lastLevelPrefab;
     private GameObject lastFinishLinePrefab;
+    private GameObject lastMinigamePrefab;
 
     public static bool EndActive = true;
+    public static bool miniGame = false;
 
     public GameObject nextLevelUI;
     public GameObject failLevelUI;
@@ -35,12 +37,14 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(lastLevelPrefab);
             Destroy(lastFinishLinePrefab);
+            Destroy(lastMinigamePrefab);
         }
 
         lastLevelPrefab = Instantiate(currentLevel.Prefab);
         lastFinishLinePrefab = Instantiate(currentLevel.finishLinePrefab);
+        lastMinigamePrefab = Instantiate(currentLevel.MiniGamePrefab);
         EndActive = false;
-
+        miniGame = false;
     }
 
     public void NextLevel()
@@ -52,6 +56,7 @@ public class LevelManager : MonoBehaviour
         GateComponent.DeadActive = false;
         SpawnedArrow.zero = false;
         RenderSettings.skybox = Skybox[Random.Range(0,3)];
+        miniGame = false;
     }
 
     public Level GetCurrentLevel()
