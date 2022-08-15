@@ -21,9 +21,9 @@ public class ArrowPosList : MonoBehaviour
             }
 
 
-            float angle = i * Mathf.PI * 2 / 10;
-            float x = Mathf.Cos(angle) * radius;
-            float y = Mathf.Sin(angle) * radius;
+            float angle = ((i * Mathf.PI * 2 / 10) + Random.Range(1F, 5F)) % 360;
+            float y = (Mathf.Sin(angle) * radius) + Random.Range(-0.05F, 0.05F);
+            float x = (Mathf.Cos(angle) * radius) + Random.Range(-0.05F, 0.05F);
 
             Vector3 pos = gameObject.GetComponent<ArrowPosList>().ArrowSpawnList[i].transform.position = new Vector3(x, y + 2.5f, 0);
             float angleDegrees = -angle * Mathf.Rad2Deg;
