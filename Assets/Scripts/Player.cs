@@ -6,19 +6,14 @@ using System.Collections.Generic;
 public class Player : MonoBehaviour
 {
     float PlayerSpeed;
-    float PlayerSwipeSpeed, swipeSpeed;
+    float PlayerSwipeSpeed;
 
     public Rigidbody rb;
-
-    Vector3 firstPos, endPos;
-    bool fark;
-
     public GameSettings settings;
 
     public GameObject spawnedArrows;
     public float clamps = 1f;
     public float minX, maxX;
-    //public LayerMask layermask;
     public float distance;
     void Start()
     {
