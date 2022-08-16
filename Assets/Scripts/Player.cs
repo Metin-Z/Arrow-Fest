@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
         {
             if (!LevelManager.miniGame.Equals(true))
                 return;
+            gameObject.transform.position = new Vector3(0, transform.position.y, transform.position.z);
             GetRay();
         }
 
@@ -54,8 +55,11 @@ public class Player : MonoBehaviour
     }
     public void Touch()
     {
+        if (LevelManager.miniGame.Equals(true))
+            return;
         if (!Input.GetMouseButton(0))
             return;
+
 
         transform.Translate(Vector3.right * Input.GetAxis("Mouse X") * PlayerSwipeSpeed * Time.deltaTime);
 
