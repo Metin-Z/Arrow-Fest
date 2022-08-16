@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
         
         Vector3 pos = Vector3.zero;
         pos.z = Mathf.Cos(degree * Mathf.Deg2Rad);
-        pos.y = Mathf.Sin(Mathf.Deg2Rad);
+        
         objectTransform.localPosition = pos * distance;
     }
     void Mid()
