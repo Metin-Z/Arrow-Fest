@@ -14,13 +14,11 @@ public class ArrowClone : MonoBehaviour
     {
         if (LevelManager.miniGame.Equals(true))
             return;
-        if (gameObject.transform.localPosition == new Vector3(-5.599593e-07f, transform.localPosition.y,transform.localPosition.z))
+        if (gameObject.transform.localPosition == new Vector3(-10.599593e-07f, transform.localPosition.y,transform.localPosition.z))
         {
             Debug.Log("Geniþle");
             gameObject.transform.localPosition = StartPos;
-        }
-
-       
+        }       
         gameObject.transform.Translate(Vector3.forward * Input.GetAxis("Mouse X") * 0.25f * Time.deltaTime);
         float xPos = Mathf.Clamp(gameObject.transform.position.x, -2.50f, 2.50f);
         gameObject.transform.position = new Vector3(xPos, gameObject.transform.position.y, gameObject.transform.position.z);
