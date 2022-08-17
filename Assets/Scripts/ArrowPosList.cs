@@ -5,7 +5,7 @@ using UnityEngine;
 public class ArrowPosList : MonoBehaviour
 {
     public ArrowSlotComp[] ArrowSpawnList;
-    
+
     public int arrowActiveCount;
 
     public void Start()
@@ -30,10 +30,11 @@ public class ArrowPosList : MonoBehaviour
 
 
             float angle = ((i * Mathf.PI * 2 / 10) + Random.Range(0, 2)) % 360;
-            float y = (Mathf.Sin(angle) * radius) + Random.Range(randomMinY,randomMaxY);
+            float y = (Mathf.Sin(angle) * radius) + Random.Range(randomMinY, randomMaxY);
             float x = (Mathf.Cos(angle) * radius) + Random.Range(randomMinX, randomMaxX);
 
-            Vector3 pos = gameObject.GetComponent<ArrowPosList>().ArrowSpawnList[i].transform.position = new Vector3(x, y + 2.5f, 0);
+            ArrowSpawnList[i].transform.position = new Vector3(x, y + 2.5f, 0);
+            ArrowSpawnList[i].GetComponent<ArrowClone>().StartPos = ArrowSpawnList[i].transform.position;
             float angleDegrees = -angle * Mathf.Rad2Deg;
             Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
         }

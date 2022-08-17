@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1511797926900266069}
   - component: {fileID: 5129184308985748171}
   - component: {fileID: 6948347702881043317}
-  - component: {fileID: 9096579161943794948}
   m_Layer: 0
   m_Name: CloneArrow
   m_TagString: Arrow
@@ -98,15 +97,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.285758, y: 0.09913856, z: 0.39290893}
   m_Center: {x: 0.00000047683716, y: 0.0000000037252903, z: 0.000000007450581}
---- !u!114 &9096579161943794948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4124092446423846512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08cb4bf068eae2c408481cfd3dda3779, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

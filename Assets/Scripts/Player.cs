@@ -18,26 +18,35 @@ public class Player : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
+        PlayerSpeed = settings.PlayerSpeed;
+        PlayerSwipeSpeed = settings.PlayerSwipeSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        PlayerSpeed = settings.PlayerSpeed;
-        PlayerSwipeSpeed = settings.PlayerSwipeSpeed;
+      
         Touch();
         Clamp();
         transform.Translate(Vector3.forward * Time.deltaTime * PlayerSpeed);
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            isTouch = true;
+        }
         if (Input.GetMouseButton(0))
         {
-            if (!LevelManager.miniGame.Equals(true))
+            if (!LevelManager.miniGame)
                 return;
-            gameObject.transform.position = new Vector3(0, transform.position.y, transform.position.z);
+            transform.position = new Vector3(0, transform.position.y, transform.position.z);
             GetRay();
         }
+        if (Input.GetMouseButtonUp(0))
+        {
+            isTouch = false;
+        }
     }
-
+    bool isTouch;
     public void Clamp()
     {
         float minX = -2.50f;
@@ -48,30 +57,30 @@ public class Player : MonoBehaviour
     }
     public void Touch()
     {
-        if (LevelManager.miniGame.Equals(true))
-            return;
-        if (!Input.GetMouseButton(0))
+        if (LevelManager.miniGame)
             return;
 
+        if (!isTouch)
+            return;
         transform.Translate(Vector3.right * Input.GetAxis("Mouse X") * PlayerSwipeSpeed * Time.deltaTime);
 
-        
+
     }
 
 
     void MoveObjects(Transform objectTransform, float degree)
-    {       
+    {
         Vector3 pos = Vector3.zero;
         pos.z = Mathf.Cos(degree * Mathf.Deg2Rad);
-        
+
         objectTransform.localPosition = pos * distance;
     }
     void Mid()
     {
-        float angle = 1f;
-        
-        float arrowCount = spawnedArrows.GetComponent<SpawnedArrow>().ActiveArrows.Count;
-        angle = 360 / arrowCount;
+        float angle;
+
+        int arrowCount = spawnedArrows.GetComponent<SpawnedArrow>().ActiveArrows.Count;
+        angle = 360f / arrowCount;
 
         for (int i = 0; i < arrowCount; i++)
         {
@@ -92,13 +101,13 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 100))
         {
             Vector3 mouse = hit.point;
-            mouse.x = Mathf.Clamp(mouse.x, minX*clamps, maxX*clamps);
+            mouse.x = Mathf.Clamp(mouse.x, minX * clamps, maxX * clamps);
 
             distance = mouse.x;
 
             Mid();
         }
     }
-   
+
 }
 

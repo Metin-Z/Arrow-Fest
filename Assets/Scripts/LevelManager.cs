@@ -17,15 +17,19 @@ public class LevelManager : MonoBehaviour
     public GameObject failLevelUI;
     public List<Material> Skybox;
 
+    [HideInInspector] public List<GameObject> levelObjectList;
     public void Start()
     {
         InitializeLevel();
-        
-        
+
+
     }
     public void InitializeLevel()
     {
         Level currentLevel = GetCurrentLevel();
+
+        levelObjectList.ForEach(x => Destroy(x));
+        levelObjectList.Clear();
 
         if (currentLevel == null)
         {
@@ -33,7 +37,7 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        if (lastLevelPrefab != null) 
+        if (lastLevelPrefab != null)
         {
             Destroy(lastLevelPrefab);
             Destroy(lastFinishLinePrefab);
@@ -55,7 +59,7 @@ public class LevelManager : MonoBehaviour
         InitializeLevel();
         GateComponent.DeadActive = false;
         SpawnedArrow.zero = false;
-        RenderSettings.skybox = Skybox[Random.Range(0,3)];
+        RenderSettings.skybox = Skybox[Random.Range(0, 3)];
         miniGame = false;
     }
 
@@ -67,6 +71,6 @@ public class LevelManager : MonoBehaviour
         return Levels.SingleOrDefault(x => x.Id == currentLevelId % totalLevelCount);
     }
 
-    
-    
+
+
 }

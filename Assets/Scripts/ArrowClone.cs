@@ -4,23 +4,39 @@ using UnityEngine;
 
 public class ArrowClone : MonoBehaviour
 {
-    private Vector3 StartPos;
+    Player _player;
+    public Vector3 StartPos;
+    Vector3 startLocalPos;
+    float zOffset;
+
+    [SerializeField] float startPosMovementSpeed, CornerMovementSpeed;
     private void Start()
     {
-        StartPos = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
+        _player = GetComponentInParent<Player>();
+        LevelManager levelManager = FindObjectOfType<LevelManager>();
+        levelManager.levelObjectList.Add(gameObject);
+        startLocalPos = transform.localPosition;
+        transform.parent = null;
         Debug.Log(StartPos);
     }
     void Update()
     {
-        if (LevelManager.miniGame.Equals(true))
-            return;
-        if (gameObject.transform.localPosition == new Vector3(-10.599593e-07f, transform.localPosition.y,transform.localPosition.z))
+        if (LevelManager.miniGame && transform.parent == null)
         {
-            Debug.Log("Geniþle");
-            gameObject.transform.localPosition = StartPos;
-        }       
-        gameObject.transform.Translate(Vector3.forward * Input.GetAxis("Mouse X") * 0.25f * Time.deltaTime);
-        float xPos = Mathf.Clamp(gameObject.transform.position.x, -2.50f, 2.50f);
-        gameObject.transform.position = new Vector3(xPos, gameObject.transform.position.y, gameObject.transform.position.z);
+            transform.SetParent(_player.transform);
+            transform.localPosition = startLocalPos;
+            return;
+        }
+        else if (!LevelManager.miniGame)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, _player.transform.position.z + zOffset);
+
+            if (Mathf.Abs(_player.transform.position.x) >= 1f)
+                transform.position = Vector3.LerpUnclamped(transform.position, new Vector3(_player.transform.position.x - (Mathf.Abs(StartPos.x) / 2f), transform.position.y, transform.position.z), CornerMovementSpeed * Time.deltaTime);
+            else
+                transform.position = Vector3.LerpUnclamped(transform.position, new Vector3(StartPos.x / Mathf.Abs(1f - (_player.transform.position.x / 5f)), transform.position.y, transform.position.z), startPosMovementSpeed * Time.deltaTime);
+
+        }
+
     }
 }
