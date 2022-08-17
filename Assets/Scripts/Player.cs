@@ -55,11 +55,7 @@ public class Player : MonoBehaviour
 
         transform.Translate(Vector3.right * Input.GetAxis("Mouse X") * PlayerSwipeSpeed * Time.deltaTime);
 
-        for (int i = 0; i < spawnedArrows.GetComponent<SpawnedArrow>()._SpawnedArrows.Length; i++)
-        {
-            Debug.Log("Deasdasdasda");
-            MoveArrows(spawnedArrows.GetComponent<SpawnedArrow>()._SpawnedArrows[i].transform, i);
-        }
+        
     }
 
 
@@ -103,12 +99,6 @@ public class Player : MonoBehaviour
             Mid();
         }
     }
-    public void MoveArrows(Transform arrowPos, float moveX)
-    {
-        Debug.Log("Move Arrows Çalýþýyor");
-        arrowPos.transform.Translate(Vector3.forward * Input.GetAxis("Mouse X") * 3 * Time.deltaTime);
-        float xPos = Mathf.Clamp(arrowPos.transform.position.x, -2.50f, 2.50f);
-        arrowPos.transform.position = new Vector3(xPos, arrowPos.transform.position.y, arrowPos.transform.position.z);
-    }
+   
 }
 
