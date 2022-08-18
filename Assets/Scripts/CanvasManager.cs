@@ -8,9 +8,11 @@ public class CanvasManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI ArrowText;
+    public TextMeshProUGUI LevelText;
     public static int ninjaCount;
 
     public SpawnedArrow spawnarrow;
+    public LevelManager _LevelManager;
     void Start()
     {
         
@@ -20,9 +22,9 @@ public class CanvasManager : MonoBehaviour
     void Update()
     {
         
-        //var cloneCount = GameObject.FindGameObjectsWithTag("Arrow");
         scoreText.text = ninjaCount.ToString();
         ArrowText.text = spawnarrow._SpawnedArrows.Length.ToString();
+        LevelText.text = (LevelManager.currentLevelId + 1).ToString();
         if (SpawnedArrow.zero == true)
         {
             ArrowText.text = (spawnarrow._SpawnedArrows.Length - 1).ToString();
