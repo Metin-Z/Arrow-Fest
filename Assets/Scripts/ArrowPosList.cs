@@ -32,7 +32,7 @@ public class ArrowPosList : MonoBehaviour
             float x = (Mathf.Cos(angle) * radius) + Random.Range(randomMinX, randomMaxX);
 
             ArrowSpawnList[i].transform.position = new Vector3(x, y + 2.5f, 0);
-            ArrowSpawnList[i].GetComponent<ArrowClone>().StartPos = ArrowSpawnList[i].transform.position;
+            ArrowSpawnList[i].GetComponent<ArrowClone>().SetOffset();
             float angleDegrees = -angle * Mathf.Rad2Deg;
             Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
         }

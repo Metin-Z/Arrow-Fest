@@ -8,8 +8,9 @@ public class ArrowClone : MonoBehaviour
     public Vector3 StartPos;
     Vector3 startLocalPos;
     float zOffset;
+    float xOffset;
 
-    [SerializeField] float startPosMovementSpeed, CornerMovementSpeed;
+    [SerializeField] float followLerpValue;
     private void Start()
     {
         _player = GetComponentInParent<Player>();
@@ -19,7 +20,7 @@ public class ArrowClone : MonoBehaviour
         transform.parent = null;
     }
     void Update()
-    {   
+    {
         if (LevelManager.miniGame && transform.parent == null)
         {
             transform.SetParent(_player.transform);
@@ -28,11 +29,19 @@ public class ArrowClone : MonoBehaviour
         }
         else if (!LevelManager.miniGame)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, _player.transform.position.z + zOffset);
-            if (Mathf.Abs(_player.transform.position.x) >= 0.85f)
-                transform.position = Vector3.LerpUnclamped(transform.position, new Vector3(_player.transform.position.x - (Mathf.Abs(StartPos.x) / 2f), transform.position.y, transform.position.z), CornerMovementSpeed * Time.deltaTime);
-            else
-                transform.position = Vector3.LerpUnclamped(transform.position, new Vector3(StartPos.x / Mathf.Abs(1f - (_player.transform.position.x / 5f)), transform.position.y, transform.position.z), startPosMovementSpeed * Time.deltaTime);
+            float squeezeExponent = (1f / (1f + (Mathf.Abs(_player.transform.position.x) / 2.5f))); //=> 2.5f corner point value.
+            transform.position = Vector3.LerpUnclamped(transform.position, new Vector3(_player.transform.position.x + (xOffset * squeezeExponent), transform.position.y, _player.transform.position.z + zOffset), followLerpValue * Time.deltaTime);
+        }
+
+    }
+
+    public void SetOffset()
+    {
+        StartPos = transform.position;
+        if (_player)
+        {
+            xOffset = StartPos.x - _player.transform.position.x;
+            zOffset = StartPos.z - _player.transform.position.z;
         }
 
     }

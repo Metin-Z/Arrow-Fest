@@ -208,8 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &36006515841860795
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,8 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &98379631909897662
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,8 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &232149040646733215
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,8 +675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &239436453586305865
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,8 +788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &267545571142211734
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,8 +933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &452741803517291422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,8 +1046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &482137851035715476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,8 +1159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &491952130361714862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,8 +1272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &510553552134374853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,8 +1543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &638687109818650605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1892,8 +1882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &921043871015070091
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,8 +1995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &921337028522604036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,8 +2108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &938224322014569962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2529,8 +2516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &1005882306128900993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,8 +2629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &1019658297198616435
 GameObject:
   m_ObjectHideFlags: 0
@@ -2757,8 +2742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &1053308532886827489
 GameObject:
   m_ObjectHideFlags: 0
@@ -3065,8 +3049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &1382690408631083836
 GameObject:
   m_ObjectHideFlags: 0
@@ -3179,8 +3162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &1407394195524113431
 GameObject:
   m_ObjectHideFlags: 0
@@ -3293,8 +3275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &1435730926902063768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3471,8 +3452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &1479462287075570416
 GameObject:
   m_ObjectHideFlags: 0
@@ -4418,8 +4398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &1775505760109439118
 GameObject:
   m_ObjectHideFlags: 0
@@ -4785,8 +4764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &1999655608148042955
 GameObject:
   m_ObjectHideFlags: 0
@@ -4931,8 +4909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &2032891966426227753
 GameObject:
   m_ObjectHideFlags: 0
@@ -5045,8 +5022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &2034342167233513721
 GameObject:
   m_ObjectHideFlags: 0
@@ -5431,8 +5407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &2118757787352948289
 GameObject:
   m_ObjectHideFlags: 0
@@ -5545,8 +5520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &2122366722746283385
 GameObject:
   m_ObjectHideFlags: 0
@@ -5788,8 +5762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &2257882157212256197
 GameObject:
   m_ObjectHideFlags: 0
@@ -6063,8 +6036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &2497454933599873082
 GameObject:
   m_ObjectHideFlags: 0
@@ -6243,8 +6215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &2584851990323332315
 GameObject:
   m_ObjectHideFlags: 0
@@ -6357,8 +6328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &2630706875902917226
 GameObject:
   m_ObjectHideFlags: 0
@@ -6764,8 +6734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &2863451423292107211
 GameObject:
   m_ObjectHideFlags: 0
@@ -6941,8 +6910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &2932309103866609661
 GameObject:
   m_ObjectHideFlags: 0
@@ -7491,8 +7459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &3396808468078379892
 GameObject:
   m_ObjectHideFlags: 0
@@ -7959,8 +7926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &3649172690029193825
 GameObject:
   m_ObjectHideFlags: 0
@@ -8105,8 +8071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &3741654849965105978
 GameObject:
   m_ObjectHideFlags: 0
@@ -8380,8 +8345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &3800317595916055848
 GameObject:
   m_ObjectHideFlags: 0
@@ -8559,8 +8523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &3944690589927878009
 GameObject:
   m_ObjectHideFlags: 0
@@ -8832,8 +8795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &4202356879917324066
 GameObject:
   m_ObjectHideFlags: 0
@@ -8978,8 +8940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &4321910214293031200
 GameObject:
   m_ObjectHideFlags: 0
@@ -9156,8 +9117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &4462695767843016444
 GameObject:
   m_ObjectHideFlags: 0
@@ -9270,8 +9230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &4470046816139689260
 GameObject:
   m_ObjectHideFlags: 0
@@ -9384,8 +9343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &4475630283004847663
 GameObject:
   m_ObjectHideFlags: 0
@@ -9530,8 +9488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &4499812335267192460
 GameObject:
   m_ObjectHideFlags: 0
@@ -9676,8 +9633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &4583373250088547842
 GameObject:
   m_ObjectHideFlags: 0
@@ -9823,8 +9779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &4632886736941344353
 GameObject:
   m_ObjectHideFlags: 0
@@ -9969,8 +9924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &4686568734988205962
 GameObject:
   m_ObjectHideFlags: 0
@@ -10179,8 +10133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &4713590483819010644
 GameObject:
   m_ObjectHideFlags: 0
@@ -10325,8 +10278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &4727840049982841236
 GameObject:
   m_ObjectHideFlags: 0
@@ -10470,8 +10422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &4779772211907447285
 GameObject:
   m_ObjectHideFlags: 0
@@ -10615,8 +10566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &4855870475917817247
 GameObject:
   m_ObjectHideFlags: 0
@@ -10729,8 +10679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &4895783952004418723
 GameObject:
   m_ObjectHideFlags: 0
@@ -10939,8 +10888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &4999052015079953439
 GameObject:
   m_ObjectHideFlags: 0
@@ -11183,8 +11131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &5112357005861022286
 GameObject:
   m_ObjectHideFlags: 0
@@ -11361,8 +11308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &5195989045451799352
 GameObject:
   m_ObjectHideFlags: 0
@@ -11507,8 +11453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &5325109060076475017
 GameObject:
   m_ObjectHideFlags: 0
@@ -11621,8 +11566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &5389629152321512266
 GameObject:
   m_ObjectHideFlags: 0
@@ -11767,8 +11711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &5433483548727544346
 GameObject:
   m_ObjectHideFlags: 0
@@ -12368,8 +12311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &5664757511910399203
 GameObject:
   m_ObjectHideFlags: 0
@@ -12482,8 +12424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &5667268040868417508
 GameObject:
   m_ObjectHideFlags: 0
@@ -12596,8 +12537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &5674579449474264769
 GameObject:
   m_ObjectHideFlags: 0
@@ -12985,8 +12925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &5825061835095400527
 GameObject:
   m_ObjectHideFlags: 0
@@ -13196,8 +13135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &5897402802938621281
 GameObject:
   m_ObjectHideFlags: 0
@@ -13342,8 +13280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &6015907162582108491
 GameObject:
   m_ObjectHideFlags: 0
@@ -13488,8 +13425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &6088713012720823054
 GameObject:
   m_ObjectHideFlags: 0
@@ -13602,8 +13538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &6103562096540077168
 GameObject:
   m_ObjectHideFlags: 0
@@ -14091,8 +14026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &6336183837435766483
 GameObject:
   m_ObjectHideFlags: 0
@@ -14300,8 +14234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &6431427743670414296
 GameObject:
   m_ObjectHideFlags: 0
@@ -14478,8 +14411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &6566583144501436589
 GameObject:
   m_ObjectHideFlags: 0
@@ -14592,8 +14524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &6595937114468414472
 GameObject:
   m_ObjectHideFlags: 0
@@ -14946,8 +14877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &6855365052327765208
 GameObject:
   m_ObjectHideFlags: 0
@@ -15092,8 +15022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &6872387823001650981
 GameObject:
   m_ObjectHideFlags: 0
@@ -15301,8 +15230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &6921438182586318976
 GameObject:
   m_ObjectHideFlags: 0
@@ -15447,8 +15375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &7041822837420886292
 GameObject:
   m_ObjectHideFlags: 0
@@ -15561,8 +15488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &7096010035834234736
 GameObject:
   m_ObjectHideFlags: 0
@@ -15968,8 +15894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &7343735331567621788
 GameObject:
   m_ObjectHideFlags: 0
@@ -16114,8 +16039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &7414364662151780482
 GameObject:
   m_ObjectHideFlags: 0
@@ -16228,8 +16152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &7452870136052285776
 GameObject:
   m_ObjectHideFlags: 0
@@ -16630,8 +16553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &7830397050458239028
 GameObject:
   m_ObjectHideFlags: 0
@@ -16776,8 +16698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &7863146458659810271
 GameObject:
   m_ObjectHideFlags: 0
@@ -17234,8 +17155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &8106908775390813972
 GameObject:
   m_ObjectHideFlags: 0
@@ -17348,8 +17268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &8115636187954179276
 GameObject:
   m_ObjectHideFlags: 0
@@ -17462,8 +17381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &8116452219194412117
 GameObject:
   m_ObjectHideFlags: 0
@@ -17866,8 +17784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &8281339953510840994
 GameObject:
   m_ObjectHideFlags: 0
@@ -18075,8 +17992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &8495751927129806023
 GameObject:
   m_ObjectHideFlags: 0
@@ -18253,8 +18169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &8589800362670825312
 GameObject:
   m_ObjectHideFlags: 0
@@ -18720,8 +18635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &9000010427989812563
 GameObject:
   m_ObjectHideFlags: 0
@@ -18834,8 +18748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &9038777227136678339
 GameObject:
   m_ObjectHideFlags: 0
@@ -18948,8 +18861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &9053666804050865305
 GameObject:
   m_ObjectHideFlags: 0
@@ -19179,8 +19091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &9124713391605003491
 GameObject:
   m_ObjectHideFlags: 0
@@ -19357,8 +19268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPos: {x: 0, y: 0, z: 0}
-  startPosMovementSpeed: 6
-  CornerMovementSpeed: 3
+  followLerpValue: 15
 --- !u!1 &9180940598243941662
 GameObject:
   m_ObjectHideFlags: 0
