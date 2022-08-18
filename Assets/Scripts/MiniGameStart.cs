@@ -10,7 +10,7 @@ public class MiniGameStart : MonoBehaviour
     {
         if (other.CompareTag("Arrow"))
         {
-            Debug.Log("Mini Game Start");      
+   
             LevelManager.miniGame = true;
             ArrowPostlists.GetComponent<ArrowPosList>().ArrowSpawnList[1].transform.position = new Vector3(transform.position.x, 0);
             for (int i = 0; i < ArrowPostlists.GetComponent<ArrowPosList>().arrowActiveCount; i++)

@@ -17,7 +17,7 @@ public class LevelManager : MonoBehaviour
     public GameObject failLevelUI;
     public List<Material> Skybox;
 
-    public static int currentLevelId;
+   
 
     [HideInInspector] public List<GameObject> levelObjectList;
     public void Start()
@@ -57,7 +57,6 @@ public class LevelManager : MonoBehaviour
     {
         Level currentLevel = GetCurrentLevel();
         PlayerPrefs.SetInt(CommonTypes.LEVEL_DATA_KEY, currentLevel.Id + 1);
-        Debug.Log("Next Level");
         InitializeLevel();
         GateComponent.DeadActive = false;
         SpawnedArrow.zero = false;
@@ -67,7 +66,7 @@ public class LevelManager : MonoBehaviour
 
     public Level GetCurrentLevel()
     {
-        currentLevelId = PlayerPrefs.GetInt(CommonTypes.LEVEL_DATA_KEY);
+        int currentLevelId = PlayerPrefs.GetInt(CommonTypes.LEVEL_DATA_KEY);
         int totalLevelCount = Levels.Length;
 
         return Levels.SingleOrDefault(x => x.Id == currentLevelId % totalLevelCount);

@@ -17,7 +17,6 @@ public class ArrowPosList : MonoBehaviour
         float randomMaxX = 0f;
         for (int i = 0; i < ArrowSpawnList.Length; i++)
         {
-            Debug.Log("Pos List For");
             if (i % 10 == 0)
             {
                 radius += 0.15f;
@@ -25,7 +24,6 @@ public class ArrowPosList : MonoBehaviour
                 randomMaxY -= 0.07f;
                 randomMinX -= 0.03f;
                 randomMaxX += 0.01f;
-                Debug.Log("10 a böldü");
             }
 
 

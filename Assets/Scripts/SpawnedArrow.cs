@@ -15,10 +15,8 @@ public class SpawnedArrow : MonoBehaviour
        _SpawnedArrows = GameObject.FindGameObjectsWithTag("Arrow");
         if (_SpawnedArrows.Length < 2 && GateComponent.DeadActive == true)
         {
-            zero = true;
-            Debug.Log("Oklar Bitti");
-            Time.timeScale = 0;
-            Debug.Log("Kaybedildi");
+            zero = true;       
+            Time.timeScale = 0; 
             failLevelUI.SetActive(true);
         }
     }

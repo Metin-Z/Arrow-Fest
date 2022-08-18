@@ -60,11 +60,6 @@ public class GateComponent : MonoBehaviour
                     {
                         other.GetComponent<ArrowPosList>().ArrowSpawnList[j+1].transform.position = new Vector3(transform.position.x, transform.position.y);
                     }
-                    
-                   
-
-                    Debug.Log(obj);
-                    Debug.Log("Oklar Arttýrýldý");
 
                     obj.transform.SetParent(other.GetComponent<ArrowPosList>().ArrowSpawnList[j].transform);
                     obj.transform.localEulerAngles = Vector3.zero;
@@ -79,13 +74,9 @@ public class GateComponent : MonoBehaviour
             {
                 for (int i = 0; i < Mathf.Abs(m_multiplyValue) + 1; i++)
                 {
-                    Debug.Log("Ok Yok Edildi");
-                    //GameObject obj = arrow.transform.GetChild(0).transform.GetChild(i).gameObject.transform.GetChild(0).gameObject;
 
                     Destroy(ListArrows.GetComponent<SpawnedArrow>().ActiveArrows.LastOrDefault());
                     ListArrows.GetComponent<SpawnedArrow>().ActiveArrows.Remove(ListArrows.GetComponent<SpawnedArrow>().ActiveArrows.LastOrDefault());
-                    //obj.SetActive(false);
-
 
                     gameObject.SetActive(false);
 
