@@ -6,7 +6,6 @@ public class SpawnedArrow : MonoBehaviour
 {
     public GameObject[] _SpawnedArrows;
     public GameObject failLevelUI;
-    public GateComponent gate;
     public List<GameObject> ActiveArrows;
 
     public static bool zero = false;
@@ -19,6 +18,7 @@ public class SpawnedArrow : MonoBehaviour
             zero = true;
             Debug.Log("Oklar Bitti");
             Time.timeScale = 0;
+            Debug.Log("Kaybedildi");
             failLevelUI.SetActive(true);
         }
     }

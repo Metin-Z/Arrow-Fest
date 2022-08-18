@@ -31,7 +31,7 @@ public class ArrowClone : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, _player.transform.position.z + zOffset);
 
-            if (Mathf.Abs(_player.transform.position.x) >= 1f)
+            if (Mathf.Abs(_player.transform.position.x) >= 0.75f)
                 transform.position = Vector3.LerpUnclamped(transform.position, new Vector3(_player.transform.position.x - (Mathf.Abs(StartPos.x) / 2f), transform.position.y, transform.position.z), CornerMovementSpeed * Time.deltaTime);
             else
                 transform.position = Vector3.LerpUnclamped(transform.position, new Vector3(StartPos.x / Mathf.Abs(1f - (_player.transform.position.x / 5f)), transform.position.y, transform.position.z), startPosMovementSpeed * Time.deltaTime);

@@ -18,7 +18,7 @@ public class Enemy1 : MonoBehaviour
     }
     private void Update()
     {
-        if (run== true)
+        if (run== true && die == false)
         {
             transform.Translate(Vector3.forward * Time.deltaTime * 3.7f);
         }

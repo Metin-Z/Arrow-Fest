@@ -21,6 +21,7 @@ public class finishline : MonoBehaviour
             
             if (LevelManager.EndActive)
                 return;
+            other.GetComponentInParent<Player>().enabled = false;
             LevelManager.EndActive = true;
             _levelManager.nextLevelUI.SetActive(LevelManager.EndActive);
             Debug.Log("Oyun Bitti");
