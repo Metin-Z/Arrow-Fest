@@ -24,8 +24,7 @@ public class CanvasManager : MonoBehaviour
         
         scoreText.text = ninjaCount.ToString();
         ArrowText.text = spawnarrow._SpawnedArrows.Length.ToString();
-        LevelText.text =(PlayerPrefs.GetInt(CommonTypes.LEVEL_DATA_KEY) + 1).ToString();
-        Debug.Log(PlayerPrefs.GetInt(CommonTypes.LEVEL_DATA_KEY));
+        LevelText.text =(PlayerPrefs.GetInt(CommonTypes.LEVEL_FAKE_DATA_KEY) + 1).ToString();
         if (SpawnedArrow.zero == true)
         {
             ArrowText.text = (spawnarrow._SpawnedArrows.Length - 1).ToString();

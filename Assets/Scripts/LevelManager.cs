@@ -62,6 +62,8 @@ public class LevelManager : MonoBehaviour
         SpawnedArrow.zero = false;
         RenderSettings.skybox = Skybox[Random.Range(0, 3)];
         miniGame = false;
+
+        PlayerPrefs.SetInt(CommonTypes.LEVEL_FAKE_DATA_KEY, PlayerPrefs.GetInt(CommonTypes.LEVEL_FAKE_DATA_KEY) + 1);
     }
 
     public Level GetCurrentLevel()
