@@ -13,11 +13,8 @@ public class GateComponent : MonoBehaviour
 
     public ArrowPosList poslist;
 
-    
-
     public GameObject[] _SpawnedArrows;
     public GameObject SpawnedArrows;
-
     public GameObject ListArrows;
     public void Update()
     {
@@ -25,9 +22,6 @@ public class GateComponent : MonoBehaviour
         {
             arrow.gameObject.transform.localScale += new Vector3(0, 0.5f , 0.5f);
         }
-
-        
-       
         _SpawnedArrows = GameObject.FindGameObjectsWithTag("Arrow");
     }
     private void OnTriggerEnter(Collider other)
