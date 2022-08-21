@@ -13,6 +13,20 @@ public class CanvasManager : MonoBehaviour
 
     public SpawnedArrow spawnarrow;
     public LevelManager _LevelManager;
+
+    public int totalKillCount;
+    public void Awake()
+    {
+        totalKillCount = PlayerPrefs.GetInt("key");
+        scoreText.text = totalKillCount.ToString();
+    }
+    public void SetTotalKillCount()
+    {
+        totalKillCount++;
+        PlayerPrefs.SetInt("key", totalKillCount);
+        scoreText.text = totalKillCount.ToString();
+        Debug.Log(totalKillCount +"total");
+    }
     void Start()
     {
         
@@ -20,9 +34,7 @@ public class CanvasManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
-        scoreText.text = ninjaCount.ToString();
+    { 
         ArrowText.text = spawnarrow._SpawnedArrows.Length.ToString();
         LevelText.text =(PlayerPrefs.GetInt(CommonTypes.LEVEL_FAKE_DATA_KEY) + 1).ToString();
         if (SpawnedArrow.zero == true)

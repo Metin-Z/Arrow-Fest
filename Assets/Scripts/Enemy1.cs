@@ -12,6 +12,8 @@ public class Enemy1 : MonoBehaviour
     public GameObject headArrow;
     public GameObject blood;
     public Transform bloodPos;
+    CanvasManager _canvasmanager;
+    
     void Start()
     {
         anim= gameObject.GetComponent<Animator>();
@@ -40,7 +42,8 @@ public class Enemy1 : MonoBehaviour
         if (dead)
             return;
         dead = true;
-        CanvasManager.ninjaCount++;
+        _canvasmanager = FindObjectOfType<CanvasManager>();
+        _canvasmanager.SetTotalKillCount();
         anim.SetBool("dead", true);
         Destroy(gameObject, 2.5f);
         //gameObject.GetComponent<Enemy1>().enabled = false;
@@ -53,4 +56,5 @@ public class Enemy1 : MonoBehaviour
         float xPos = Mathf.Clamp(transform.position.x, minX, maxX);
         transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
     }
+    
 }

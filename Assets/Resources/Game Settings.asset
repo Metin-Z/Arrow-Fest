@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Game Settings
   m_EditorClassIdentifier: 
   PlayerSpeed: 12.5
-  PlayerSwipeSpeed: 10
+  PlayerSwipeSpeed: 5
