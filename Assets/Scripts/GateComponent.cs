@@ -23,7 +23,7 @@ public class GateComponent : MonoBehaviour
             return;
         if (other.gameObject.CompareTag("Arrow") && other.GetComponent<ArrowPosList>())
         {
-            radi+= 0.55f;
+            //radi+= 0.55f;
             DeadActive = true;
             if (m_multiplyValue > 0)//arttýracaðýz
             {
