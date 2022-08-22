@@ -7,10 +7,8 @@ public class Player : MonoBehaviour
 {
     float PlayerSpeed;
     float PlayerSwipeSpeed;
-
     public Rigidbody rb;
     public GameSettings settings;
-
     public GameObject spawnedArrows;
     public float clamps = 1f;
     public float minX, maxX;
