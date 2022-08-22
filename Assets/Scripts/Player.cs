@@ -47,7 +47,6 @@ public class Player : MonoBehaviour
     {
         float minX = -2.50f;
         float maxX = 2.50f;
-
         float xPos = Mathf.Clamp(transform.position.x, minX, maxX);
         transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
     }
@@ -55,26 +54,19 @@ public class Player : MonoBehaviour
     {
         if (LevelManager.miniGame)
             return;
-
         if (!isTouch)
             return;
         transform.Translate(Vector3.right * Input.GetAxis("Mouse X") * PlayerSwipeSpeed * Time.deltaTime);
-
-
     }
-
-
     void MoveObjects(Transform objectTransform, float degree)
     {
         Vector3 pos = Vector3.zero;
         pos.z = Mathf.Cos(degree * Mathf.Deg2Rad);
-
         objectTransform.localPosition = pos * distance;
     }
     void Mid()
     {
         float angle;
-
         int arrowCount = spawnedArrows.GetComponent<SpawnedArrow>().ActiveArrows.Count;
         angle = 360f / arrowCount;
 
