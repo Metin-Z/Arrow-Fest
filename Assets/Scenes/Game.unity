@@ -1254,7 +1254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 6, y: -384}
+  m_AnchoredPosition: {x: 6, y: -333}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &890081178
@@ -1718,7 +1718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 112.16049, y: 733}
+  m_AnchoredPosition: {x: 107, y: 742}
   m_SizeDelta: {x: 172.81519, y: 32.294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1225644112
@@ -1958,7 +1958,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 95, y: 733}
+  m_AnchoredPosition: {x: 89.83951, y: 742}
   m_SizeDelta: {x: 138.4942, y: 32.294006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1426285081
@@ -2651,6 +2651,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c0b3658635923fe43a17653a0b4bbf31, type: 2}
   - {fileID: 11400000, guid: 43ef121c892df5b429a8c7fee3d8e392, type: 2}
   - {fileID: 11400000, guid: 76e6595ce5289504d90904d03a317df8, type: 2}
+  - {fileID: 11400000, guid: d0825302b54319d4dbcf8efb9e76fc91, type: 2}
   nextLevelUI: {fileID: 1829537910}
   failLevelUI: {fileID: 1836209589}
   Skybox:
