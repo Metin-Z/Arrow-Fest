@@ -9,22 +9,15 @@ public class LevelManager : MonoBehaviour
     private GameObject lastLevelPrefab;
     private GameObject lastFinishLinePrefab;
     private GameObject lastMinigamePrefab;
-
     public static bool EndActive = true;
     public static bool miniGame = false;
-
     public GameObject nextLevelUI;
     public GameObject failLevelUI;
     public List<Material> Skybox;
-
-   
-
     [HideInInspector] public List<GameObject> levelObjectList;
     public void Start()
     {
         InitializeLevel();
-
-
     }
     public void InitializeLevel()
     {
@@ -45,14 +38,12 @@ public class LevelManager : MonoBehaviour
             Destroy(lastFinishLinePrefab);
             Destroy(lastMinigamePrefab);
         }
-
         lastLevelPrefab = Instantiate(currentLevel.Prefab);
         lastFinishLinePrefab = Instantiate(currentLevel.finishLinePrefab);
         lastMinigamePrefab = Instantiate(currentLevel.MiniGamePrefab);
         EndActive = false;
         miniGame = false;
     }
-
     public void NextLevel()
     {
         Level currentLevel = GetCurrentLevel();
@@ -62,18 +53,12 @@ public class LevelManager : MonoBehaviour
         SpawnedArrow.zero = false;
         RenderSettings.skybox = Skybox[Random.Range(0, 3)];
         miniGame = false;
-
         PlayerPrefs.SetInt(CommonTypes.LEVEL_FAKE_DATA_KEY, PlayerPrefs.GetInt(CommonTypes.LEVEL_FAKE_DATA_KEY) + 1);
     }
-
     public Level GetCurrentLevel()
     {
         int currentLevelId = PlayerPrefs.GetInt(CommonTypes.LEVEL_DATA_KEY);
         int totalLevelCount = Levels.Length;
-
         return Levels.SingleOrDefault(x => x.Id == currentLevelId % totalLevelCount);
     }
-
-
-
 }

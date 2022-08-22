@@ -39,9 +39,7 @@ public class ArrowPool : MonoBehaviour
             return null;
         }
         GameObject obj = pools[objectType].pooledObjects.Dequeue();
-
         obj.SetActive(true);
-
         pools[objectType].pooledObjects.Enqueue(obj);
         return obj;
     }

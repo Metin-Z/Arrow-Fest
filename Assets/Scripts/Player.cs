@@ -20,9 +20,7 @@ public class Player : MonoBehaviour
         Time.timeScale = 1;
         PlayerSpeed = settings.PlayerSpeed;
         PlayerSwipeSpeed = settings.PlayerSwipeSpeed;
-    }
-
-    // Update is called once per frame
+    } 
     void Update()
     {
       
@@ -110,4 +108,3 @@ public class Player : MonoBehaviour
     }
 
 }
-

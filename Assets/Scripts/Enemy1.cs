@@ -12,8 +12,7 @@ public class Enemy1 : MonoBehaviour
     public GameObject headArrow;
     public GameObject blood;
     public Transform bloodPos;
-    CanvasManager _canvasmanager;
-    
+    CanvasManager _canvasmanager;  
     void Start()
     {
         anim= gameObject.GetComponent<Animator>();
@@ -26,7 +25,6 @@ public class Enemy1 : MonoBehaviour
         }
         Clamp();
     }
-
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Arrow"))
@@ -45,16 +43,13 @@ public class Enemy1 : MonoBehaviour
         _canvasmanager = FindObjectOfType<CanvasManager>();
         _canvasmanager.SetTotalKillCount();
         anim.SetBool("dead", true);
-        Destroy(gameObject, 2.5f);
-        //gameObject.GetComponent<Enemy1>().enabled = false;
+        Destroy(gameObject, 2.5f);      
     }
     public void Clamp()
     {
         float minX = -2.50f;
         float maxX = 2.50f;
-
         float xPos = Mathf.Clamp(transform.position.x, minX, maxX);
         transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
-    }
-    
+    } 
 }

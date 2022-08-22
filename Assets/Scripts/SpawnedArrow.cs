@@ -7,9 +7,7 @@ public class SpawnedArrow : MonoBehaviour
     public GameObject[] _SpawnedArrows;
     public GameObject failLevelUI;
     public List<GameObject> ActiveArrows;
-
     public static bool zero = false;
-
     private void Update()
     {
        _SpawnedArrows = GameObject.FindGameObjectsWithTag("Arrow");
@@ -20,5 +18,4 @@ public class SpawnedArrow : MonoBehaviour
             failLevelUI.SetActive(true);
         }
     }
-
 }
